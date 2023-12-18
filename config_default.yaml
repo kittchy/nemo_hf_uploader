@@ -1,0 +1,11 @@
+model_path: models/<model_file>
+organization: TUT-SLP-lab
+user_name: hogehoge
+email: hogehoge@tut.jp
+model_type: EncDecCTCModel # EncDecRNNTModel
+tags: ["Conformer", "CTC"]
+datasets: ["laboro-tv-speech", "csj", "jnas", "cejc"]
+language: ja
+token: "<access token>"
+commit_message: "[ADD] Initial commit!"
+create_new_repo: True

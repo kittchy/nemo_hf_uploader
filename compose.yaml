@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  nemo:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    platform: linux/amd64
+    volumes:
+      - ./models/:/app/models/
+    command: python src/uploader.py
