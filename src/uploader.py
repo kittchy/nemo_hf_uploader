@@ -43,7 +43,7 @@ class NeMoHuggingFaceModelConfig:
     library_name: str = "nemo"
 
 
-@hydra.main(version_base=None, config_path="../", config_name="config")
+@hydra.main(version_base=None, config_path="../conf/", config_name="config")
 def main(args: Args):
     logger.info("Load model")
     model = model_classes[args.model_type].restore_from(restore_path=args.model_path)
@@ -92,7 +92,7 @@ def main(args: Args):
         git_user=args.user_name,
         git_email=args.email,
     ).commit(args.commit_message):
-        model.save_to(os.path.dirname(args.model_path))
+        model.save_to(os.path.basename(args.model_path))
         with open("README.md", "w") as f:
             f.write("---\n")
             f.write(OmegaConf.to_yaml(config))

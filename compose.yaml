@@ -5,7 +5,9 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
+    image: kinouchi1000/nemo-hf-exporter:latest
     platform: linux/amd64
     volumes:
       - ./models/:/app/models/
+      - ./conf/:/app/conf/
     command: python src/uploader.py

@@ -20,7 +20,9 @@ cp config_default.yaml config.yaml
 
 - Docker Imageをpullします。
 
-  Comming soon ...
+  ```bash
+  docker pull kittchy/nemo-model-push-tools:latest
+  ```
 
 - もしImageがない場合やpullできない場合はdocker imageをbuildします。
   ```bash
