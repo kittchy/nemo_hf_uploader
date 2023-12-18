@@ -1,11 +1,11 @@
-model_path: models/<model_file>
+model_path: models/<model_file> # file_nameがそのままrepository nameになります。
 organization: TUT-SLP-lab
 user_name: hogehoge
 email: hogehoge@tut.jp
 model_type: EncDecCTCModel # EncDecRNNTModel
-tags: ["Conformer", "CTC"]
-datasets: ["laboro-tv-speech", "csj", "jnas", "cejc"]
+tags: ["Conformer", "CTC"] # モデルの情報を記述
+datasets: ["laboro-tv-speech", "csj", "jnas", "cejc"] # 使ったデータセットを記述
 language: ja
-token: "<access token>"
+token: "<access token>" # 必ずwrite 権限をtokenに持たせてください。
 commit_message: "[ADD] Initial commit!"
-create_new_repo: True
+create_new_repo: True # 既存のrepositoryにpushする場合はfalseにしてください！
