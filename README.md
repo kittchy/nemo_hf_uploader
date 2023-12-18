@@ -36,3 +36,20 @@ docker を使ってモデルをpushします。
 ```bash
 docker compose up
 ```
+
+# プライベートのHugging Faceモデルを使うには？
+
+そのままではプライベートのモデルは使えません。以下の手順で使えるようにします。
+
+1. Hugging Faceにログインします。
+
+```bash
+huggingface-cli login
+```
+
+2. nemoで呼び出します。
+
+```python
+import nemo.collections.asr as nemo_asr
+asr_model = nemo_asr.models.ASRModel.from_pretrained("TUT-SLP-lab/Conformer-CTC-Char-laboro-csj-cejc-jsut")
+```
