@@ -9,7 +9,6 @@ from loguru import logger
 from omegaconf import OmegaConf, open_dict
 
 from readme_template import get_template
-import subprocess
 
 model_classes = {
     "EncDecCTCModel": nemo_asr.models.EncDecCTCModel,
