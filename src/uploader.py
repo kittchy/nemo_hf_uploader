@@ -19,13 +19,13 @@ model_classes = {
 @dataclass
 class Args:
     model_path: str = ""  # NeMo Model Path
-    organization: str = "TUT-SLP-lab"  # HuggingFace Username
+    organization: str = ""  # HuggingFace Username
     user_name: str = ""
     email: str = ""
     model_type: str = "EncDecCTCModel"  # Model Type
     tags: List[str] = field(default_factory=list)  # Tags for model"
     datasets: List[str] = field(default_factory=list)  # Datasets for model
-    language: str = "ja"  # Model language
+    language: str = ""  # Model language
     token: str = ""  # HuggingFace Token
     commit_message: str = "Initial commit!"  # Commit Message
     create_new_repo: bool = True  # Store model in new repo or not
